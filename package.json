@@ -1,7 +1,7 @@
 {
   "name": "calendar-loop",
   "version": "1.0.0",
-  "description": "Utility that helps when creating visual representations of calendar months",
+  "description": "Utility that makes creating visual representations of calendar months a bit less painful",
   "main": "index.js",
   "scripts": {
     "test": "tape test.js"
@@ -13,7 +13,8 @@
   "keywords": [
     "calendar",
     "loop",
-    "month"
+    "month",
+    "iterator"
   ],
   "author": "Christian Tegnér <christian.tegner@gmail.com>",
   "license": "ISC",
