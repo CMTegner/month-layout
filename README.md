@@ -88,7 +88,7 @@ Add some (conditional) styling and you're in business!
 
 ## API
 
-### layout(options: object): Array<Array<number>>
+### layout(options: object): Array\<Array\<number>>
 
 `options` must contain at least `year: number` and `month: number`. Note that `month` is zero-based, so January is `0`, February is `1`, and so on. This choice was made to mirror [`new Date(year, month)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date). You can also provide `startOfWeek: number` to determine which weekday should be used as the first. Sunday is `0` (default), and Monday is `1` (these are the only two supported atm.). Again, this was done to mirror [`Date#getDay()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay). `month-layout` exports two enums so you don't have to remember the numbers: `import layout, { SUNDAY, MONDAY } from 'month-layout'`.
 
