@@ -1,13 +1,13 @@
-# calendar-loop
+# month-layout
 
 Utility that makes creating visual representations of calendar months a bit less painful.
 
 ## Examples
 
 ```javascript
-import loop from 'calendar-loop'
+import layout from 'month-layout'
 
-loop({ year: 2016, month: 5 })
+layout({ year: 2016, month: 5 })
 ```
 
 The output of the example above will be:
@@ -25,7 +25,7 @@ The output of the example above will be:
 Here's how you might use it to build a calendar:
 
 ```javascript
-const weeks = loop({ year: 2016, month: 2 })
+const weeks = layout({ year: 2016, month: 2 })
 
 weeks.reduce((rows, week) => {
   return `${rows}<div>${week.reduce((cells, day) => {
@@ -88,9 +88,9 @@ Add some (conditional) styling and you're in business!
 
 ## API
 
-### loop(options: object): Array<Array<number>>
+### layout(options: object): Array<Array<number>>
 
-`options` must contain at least `year: number` and `month: number`. Note that `month` is zero-based, so January is `0`, February is `1`, and so on. This choice was made to mirror [`new Date(year, month)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date). You can also provide `startOfWeek: number` to determine which weekday should be used as the first. Sunday is `0` (default), and Monday is `1` (these are the only two supported atm.). Again, this was done to mirror [`Date#getDay()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay). `calendar-loop` exports two enums so you don't have to remember the numbers: `import loop, { SUNDAY, MONDAY } from 'calendar-loop'`.
+`options` must contain at least `year: number` and `month: number`. Note that `month` is zero-based, so January is `0`, February is `1`, and so on. This choice was made to mirror [`new Date(year, month)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date). You can also provide `startOfWeek: number` to determine which weekday should be used as the first. Sunday is `0` (default), and Monday is `1` (these are the only two supported atm.). Again, this was done to mirror [`Date#getDay()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay). `month-layout` exports two enums so you don't have to remember the numbers: `import layout, { SUNDAY, MONDAY } from 'month-layout'`.
 
 The return value is a two-dimensional array of numbers. `-1` should be treated as a day belonging to the previous/next month, render accordingly.
 

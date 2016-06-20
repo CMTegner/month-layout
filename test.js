@@ -1,5 +1,5 @@
 var test = require('tape')
-var loop = require('.')
+var layout = require('.')
 
 test('return matrix of weeks and days', function (t) {
   var options = {
@@ -13,7 +13,7 @@ test('return matrix of weeks and days', function (t) {
     [19, 20, 21, 22, 23, 24, 25],
     [26, 27, 28, 29, 30, -1, -1],
   ]
-  var result = loop(options)
+  var result = layout(options)
   t.deepEquals(result, expected)
   t.end()
 })
@@ -22,7 +22,7 @@ test('configurable start of week', function (t) {
   var options = {
     year: 2016,
     month: 5,
-    startOfWeek: loop.MONDAY,
+    startOfWeek: layout.MONDAY,
   }
   var expected = [
     [-1, -1,  1,  2,  3,  4,  5],
@@ -31,7 +31,7 @@ test('configurable start of week', function (t) {
     [20, 21, 22, 23, 24, 25, 26],
     [27, 28, 29, 30, -1, -1, -1],
   ]
-  var result = loop(options)
+  var result = layout(options)
   t.deepEquals(result, expected)
   t.end()
 })

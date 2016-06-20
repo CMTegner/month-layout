@@ -1,5 +1,5 @@
 {
-  "name": "calendar-loop",
+  "name": "month-layout",
   "version": "1.0.0",
   "description": "Utility that makes creating visual representations of calendar months a bit less painful",
   "main": "index.js",
@@ -8,20 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CMTegner/calendar-loop.git"
+    "url": "git+https://github.com/CMTegner/month-layout.git"
   },
   "keywords": [
     "calendar",
-    "loop",
     "month",
-    "iterator"
+    "layout"
   ],
   "author": "Christian Tegnér <christian.tegner@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CMTegner/calendar-loop/issues"
+    "url": "https://github.com/CMTegner/month-layout/issues"
   },
-  "homepage": "https://github.com/CMTegner/calendar-loop#readme",
+  "homepage": "https://github.com/CMTegner/month-layout#readme",
   "devDependencies": {
     "tape": "^4.5.1"
   },
