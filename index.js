@@ -9,7 +9,7 @@ function getDaysInMonth (year, month) {
 }
 
 module.exports = function (options) {
-  var offset = new Date(options.year, options.month).getDay() - (options.startOfWeek === MONDAY ? 1 : 0)
+  var offset = (new Date(options.year, options.month).getDay() + (options.startOfWeek === MONDAY ? 6 : 0)) % 7
   var daysInMonth = getDaysInMonth(options.year, options.month)
   var weeks = Math.ceil((offset + daysInMonth) / DAYS_IN_WEEK)
   var cells = weeks * DAYS_IN_WEEK
