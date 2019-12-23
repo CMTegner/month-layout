@@ -1,6 +1,6 @@
 {
   "name": "month-layout",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility that makes creating visual representations of calendar months a bit less painful",
   "main": "index.js",
   "scripts": {
